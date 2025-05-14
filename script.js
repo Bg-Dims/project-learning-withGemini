@@ -145,3 +145,72 @@ console.log("Hobi saya adalah: ", hobi);
 let firstHobi = hobi.shift();
 console.log("ini hobi awal yang dihapus: ", firstHobi);
 console.log("Ini adalah hobi sejati saya: ", hobi);
+
+//? Hari ke-7 Belajar function
+
+function testing() {
+    console.log("Halo ini testing!...");
+}
+testing();
+testing();
+
+//Fungsi dengan parameter
+function sapaPengunjung(name) {
+    console.log("Halo! nama saya " + name + " salam kenal..");
+}
+sapaPengunjung("Budi");
+sapaPengunjung("Dimas");
+
+// beberapa parameter
+function jumlahDuaAngka(angka1, angka2) {
+    let hasil = angka1 + angka2;
+    //alert("Hasil penjumlahan: " + hasil);
+    console.log("Hasil penjumlahan: " + hasil);
+}
+jumlahDuaAngka(6, 6);
+jumlahDuaAngka(5, 5);
+
+// return di function
+function tambah(a, b) {
+    let total = a + b;
+    return total;
+}
+
+let hasilPenjumlahan1 = tambah(7, 8);
+console.log("Hasil penjumlahan dari 7 dan 8 adalah " + hasilPenjumlahan1);
+console.log("Hasil penjumlahan dari 10 dan 12 adalah " + tambah(10, 12));
+
+function cetakPesan(pesan) {
+  console.log(pesan);
+  return pesan //jika ini dihapus maka akan undefined
+}
+let hasilCetak = cetakPesan("Ini pesan.");
+console.log("Nilai kembalian fungsi cetakPesan: " + hasilCetak);
+
+//? tugas dari gemini (function)
+//1
+function cetakHelloWorld() {
+    console.log("Hello world");
+}
+
+cetakHelloWorld();
+cetakHelloWorld();
+cetakHelloWorld();
+
+//2
+function perkenalanDiri(nama, umur) {
+    console.log("Nama saya " + nama + ", dan saya berumur " + umur + " tahun")
+}
+
+perkenalanDiri("Ahmad", 27);
+perkenalanDiri("Fathin", 23);
+perkenalanDiri("Rijal", 24);
+
+//3
+function fahrenheitKeCelcius(fahrenheit) {
+    let celcius = (fahrenheit - 32) * 5 / 9;
+    return celcius
+}
+
+console.log("212 fahrenheit = " + fahrenheitKeCelcius(212) + " celcius");
+console.log("32 fahrenheit = " + fahrenheitKeCelcius(32) + " celcius");
