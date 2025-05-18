@@ -273,3 +273,16 @@ if (linkUntukDiambil) {
 else {
     console.log("Elemen link pertama pada nav tidak ada untuk digunakan getattribut");
 }
+
+//? Hari ke-11 Dom Manipulation (style, classList)
+let styleList = document.querySelector("ul");
+styleList.style.backgroundColor = "seagreen";
+
+const pBaru = document.querySelector("#PBaru");
+pBaru.classList.add('warna-kuning');
+pBaru.classList.add('highlight', 'tes');
+
+pBaru.classList.remove('highlight');
+pBaru.classList.replace('paragraf-baru', 'paragraf-lama');
+pBaru.classList.toggle('highlight');
+pBaru.classList.contains('warna-kuning');
