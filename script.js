@@ -236,3 +236,40 @@ console.log("Elemen tag a ", elemenLinkPertama);
 
 let linkDiDalamNav = document.querySelectorAll("nav a");
 console.log("Ini semua yang ada dalam nav ", linkDiDalamNav);
+
+//hari ke-10 DOM Manipulation
+let menyapa2 = document.querySelector("#sapa2");
+menyapa2.textContent = "text ini diubah oleh javascript";
+
+let paragrafLorem2 = document.querySelector(".paragraf-lorem2");
+paragrafLorem2.innerHTML = "Konten paragraf ini telah diubah. ini adalah teks yang <strong>penting</strong>!";
+
+let inputNama = document.querySelector("#namaPengguna");
+inputNama.value = "Nama Default";
+
+const textareaPesan = document.querySelector("#pesanPengguna");
+textareaPesan.value = "Ketik pesan anda di sini...!";
+
+//menggunakan attribut
+let linkPertama = document.querySelector("nav a");
+if (linkPertama) {
+    linkPertama.setAttribute("href", "https://www.google.com");
+    linkPertama.setAttribute("target", "_blank");
+    console.log("Atribut Link pertama berhasil diubah")
+}
+else {
+    alert("Elemen link pertama di nav tidak ditemukan")
+}
+
+let linkUntukDiambil = document.querySelector("nav a");
+if (linkUntukDiambil) {
+    let tujuanLink = linkUntukDiambil.getAttribute("href");
+    let targetLink = linkUntukDiambil.getAttribute("target");
+    let kelasLink = linkUntukDiambil.getAttribute("class");
+    console.log("Tujuan link pertama ", tujuanLink);
+    console.log("Target link pertama ", targetLink);
+    console.log("kelas link pertama ", kelasLink);
+}
+else {
+    console.log("Elemen link pertama pada nav tidak ada untuk digunakan getattribut");
+}
