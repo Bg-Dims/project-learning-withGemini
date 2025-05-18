@@ -214,3 +214,25 @@ function fahrenheitKeCelcius(fahrenheit) {
 
 console.log("212 fahrenheit = " + fahrenheitKeCelcius(212) + " celcius");
 console.log("32 fahrenheit = " + fahrenheitKeCelcius(32) + " celcius");
+
+//?Hari ke-9 memilih element
+let elementSapa = document.getElementById("sapa");
+console.log(elementSapa);
+
+let paragraf = document.getElementsByClassName("paragraf-lorem");
+console.log(paragraf);
+
+let semuaParagraf = document.getElementsByTagName("p");
+console.log("ini semua paragfraf <p>:", semuaParagraf);
+
+let semuaTagLink = document.getElementsByTagName("a");
+console.log("Ini tag Link ", semuaTagLink);
+
+let elemenDenganKelas = document.querySelector(".paragraf-lorem");
+console.log("Elemen pertama dengan class p lorem ", elemenDenganKelas);
+
+let elemenLinkPertama = document.querySelector("a");
+console.log("Elemen tag a ", elemenLinkPertama);
+
+let linkDiDalamNav = document.querySelectorAll("nav a");
+console.log("Ini semua yang ada dalam nav ", linkDiDalamNav);
