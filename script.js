@@ -286,3 +286,34 @@ pBaru.classList.remove('highlight');
 pBaru.classList.replace('paragraf-baru', 'paragraf-lama');
 pBaru.classList.toggle('highlight');
 pBaru.classList.contains('warna-kuning');
+
+//?hari ke 12 event handling
+let myButton = document.querySelector("#myButton");
+myButton.addEventListener('click', function(){
+    pBaru.classList.replace("warna-kuning", "warna-hitam");
+    console.log("Tombol berhasil diclick");
+    alert("anda mengklik tombol");
+});
+
+ let buttonList = document.querySelector("#buttonList");
+ buttonList.addEventListener('click', function() {
+    styleList.style.backgroundColor = "blue";
+    console.log('warna list anda telah berubah');
+ })
+
+ let myH2 = document.querySelector(".myH2");
+ if (myH2) {
+     myH2.addEventListener('mouseover', function() {
+        console.log("mouse di atas H2");
+        myH2.style.color = "blue";
+     });
+
+     //listener untuk mouseout
+     myH2.addEventListener('mouseout', function() {
+        console.log("Mouse keluar dari h2");
+        myH2.style.color = "";
+     });
+ } else {
+    console.log("myH2 tidak ditemukan");
+ }
+ 
