@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>50 Days Project</title>
+    <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style-index.css">
+
+    <style>
+        /* Custom CSS for the auto-scrolling animation */
+@keyframes scroll-x-loop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* Calculation:
+     * Each image: w-64 (256px) + mx-2 (0.5rem left + 0.5rem right = 1rem = 16px) = 272px
+     * Total images in one original set: 4
+     * Total scroll distance = 4 * 272px = 1088px
+     * If you change image sizes or margins, update this value!
+     */
+    transform: translateX(-1088px);
+  }
+}
+
+.animate-scroll-x-loop {
+  animation: scroll-x-loop 20s linear infinite; /* Durasi animasi 20 detik, linear (kecepatan konstan), looping tak terbatas */
+}
+
+/* Opsional: Berhenti bergerak saat di-hover */
+/* .animate-scroll-x-loop:hover {
+  animation-play-state: paused;
+} */
+    </style>
+</head>
+<body>
+
+    <header>  
+        <nav class="flex justify-center md:justify-between bg-blue-200 p-1 md:p-4">
+            <h2 class="text-emerald-900 font-bold"><a href="#">School <span class="text-emerald-700">Name</span></a></h2>
+            <ul class="flex">
+                <li class="px-2 md:px-5"><a href="#">Beranda</a></li>
+                <li class="px-2 md:px-5"><a href="tentang_kami.html">Tentang Kami</a></li>
+                <li class="px-2 md:px-5"><a href="kontak.html">Kontak</a></li>
+                <li class="px-2 md:px-5"><a href="info_pendaftaran.html">Info Pendaftaran</a></li>
+            </ul>
+            <a href="#"><button class="cursor-pointer px-2 border-x-2 border-emerald-900">Daftar Sekarang</button></a>
+        </nav>
+    </header>
+
+    <main class="pt-8 pb-8">
+        <!-- Ini Kontainer Selamat datang -->
+        <section class="flex flex-col md:flex-row mx-8 md:mx-22 gap-8">
+            <img class="w-full md:w-1/2 lg:max-w-[500px] rounded-3xl shadow-2xl object-cover" src="./img/pic.jpg" alt="">
+            <div class="flex flex-col ">
+                <h2 class="text-2xl md:text-3xl font-extrabold mb-5">Selamat Datang di Situs Resmi Sekolah MIS Al Hidayah</h2>
+                <p class="text-base md:text-lg font-medium text-justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur maiores cupiditate ab, consequuntur iure obcaecati autem repellendus minus culpa architecto? Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat in dignissimos dolore eum quidem! Placeat, accusantium! Aspernatur maiores sunt pariatur.</p>
+                <a href="info_pendaftaran.html" class="block w-fit mx-auto group">
+                    <button class="my-6 md:my-10 border-gray-800 border-2 p-2 rounded-full px-4 cursor-pointer
+                    relative overflow-hidden
+                    bg-transparent text-gray-800 transition-colors duration-300
+                    before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-0 before:h-full before:bg-gray-600 before:-z-10 before:transition-all before:duration-300
+                    hover:text-white group-hover:before:w-full">
+                    Daftar Sekarang
+                    </button>
+                </a>
+            </div>
+        </section>
+        <!-- Kontainer selamat datang selesai -->
+
+        <!-- Foto-foto kegiatan -->
+        <section class="md:my-8">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-3 md:mb-6">Foto-foto Kegiatan</h2>
+            <div class="relative overflow-hidden max-w-4xl mx-auto">
+                <div class="flex animate-scroll-x-loop">
+                    <img src="./img/school_1.jpg" alt="Kegiatan sekolah 1" class="w-64 h-48 object-cover flex-shrink-0 mx-2 my-2 rounded-lg shadow-md">
+                    <img src="./img/school_2.jpg" alt="Kegiatan sekolah 2" class="w-64 h-48 object-cover flex-shrink-0 mx-2 my-2 rounded-lg shadow-md">
+                    <img src="./img/school_3.jpg" alt="Kegiatan sekolah 3" class="w-64 h-48 object-cover flex-shrink-0 mx-2 my-2 rounded-lg shadow-md">
+                    <img src="./img/school_5.jpg" alt="Kegiatan sekolah 4" class="w-64 h-48 object-cover flex-shrink-0 mx-2 my-2 rounded-lg shadow-md">
+        
+                    <img src="./img/school_1.jpg" alt="Kegiatan sekolah 1 (duplikat)" class="w-64 h-48 object-cover flex-shrink-0 mx-2 my-2 rounded-lg shadow-md">
+                    <img src="./img/school_2.jpg" alt="Kegiatan sekolah 2 (duplikat)" class="w-64 h-48 object-cover flex-shrink-0 mx-2 my-2 rounded-lg shadow-md">
+                    <img src="./img/school_3.jpg" alt="Kegiatan sekolah 3 (duplikat)" class="w-64 h-48 object-cover flex-shrink-0 mx-2 my-2 rounded-lg shadow-md">
+                    <img src="./img/school_5.jpg" alt="Kegiatan sekolah 4 (duplikat)" class="w-64 h-48 object-cover flex-shrink-0 mx-2 my-2 rounded-lg shadow-md">
+                </div>
+        
+                <div class="absolute left-0 top-0 h-full w-12 bg-gradient-to-r from-white to-transparent z-10"></div>
+        
+                <div class="absolute right-0 top-0 h-full w-12 bg-gradient-to-l from-white to-transparent z-10"></div>
+            </div>
+        </section>
+        <!-- Foto-foto kegiatan selesai -->
+
+        <!-- Visi dan Misi -->
+         <!-- <section>
+            <div>
+                <h2>Visi</h2>
+                <ul>
+                    <li>Beriman</li>
+                    <li>Berkarakter</li>
+                    <li>Visioner</li>
+                    <li>Cinta lingkungan</li>
+                </ul>
+            </div>
+         </section> -->
+
+    </main>
+
+    <footer class="mt-15 flex justify-center bg-gray-900 text-white">
+        <p class="h-8">&copy; 2025 bg-Dim. Semua Hak Dilindungi</p>
+    </footer>
+</body>
+</html>
